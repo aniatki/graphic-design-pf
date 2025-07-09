@@ -1,10 +1,10 @@
 import './App.css'
-import ColorPalette from './assets/components/ui/colorPalette'
+import ColorPalette from './assets/components/colorPalette'
 import ImageScroller from './assets/components/imageScroller'
 import List from './assets/components/ui/list'
 import ListElement from './assets/components/ui/li'
 import Paragraph from './assets/components/ui/paragraph'
-import TypeElement from './assets/components/ui/typeElement'
+import TypeElement from './assets/components/typeElement'
 
 // Image imports
 import supermarketInterior from './assets/images/supermarket-interior.avif'
