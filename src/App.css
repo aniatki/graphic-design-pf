@@ -6,14 +6,19 @@
 
 #root {
   margin: 0 auto 3rem auto;
-  max-width: 800px;
-  padding-inline: var(--spacing);
+  max-width: 1400px;
+  padding-inline: clamp(var(--spacing), 2vw, 5rem);
 }
 
 h1 {
-  font-size: clamp(3rem, 5vw + 1rem, 12rem);
+  font-size: clamp(3rem, 3vw + 1rem, 12rem);
   line-height: 0;
   font-weight: 800;
+}
+
+.final-logo {
+  padding-block: 2rem;
+  padding-inline-start: 0;
 }
 
 /* Logo Elements */
@@ -21,7 +26,7 @@ h1 {
 .logo-elements {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.2rem;
-  margin-block: 2rem;
+  margin-block: .5rem;
 }
 
 .logo-elements>div {
@@ -68,6 +73,7 @@ h1 {
   width: var(--spacing);
   top: 0;
   height: 100%;
+  z-index: -1;
 }
 
 .color-grid>.row:nth-of-type(odd)::before {

@@ -1,11 +1,11 @@
 export const logoElements = [
     {
-        imageSource: "src/assets/images/triangle.svg",
+        imageSource: "src/assets/images/costcutter/triangle.svg",
         altText: "Triangle that is part of the logo",
         description: "mostly associated with stability",
     },
     {
-        imageSource: "src/assets/images/circle.svg",
+        imageSource: "src/assets/images/costcutter/circle.svg",
         altText: "Circle that is part of the logo",
         description: "associated with security, community and continuity",
     },

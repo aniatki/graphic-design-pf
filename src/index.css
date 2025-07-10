@@ -1,3 +1,9 @@
+*,*::before, *::after { box-sizing: border-box; margin: 0}
+
+::selection {
+  background: rgb(170, 232, 210);
+}
+
 :root {
   font-family: "Playfair Display", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.7;
@@ -15,9 +21,61 @@
 }
 
 body {
-  margin: 0;
   position: relative;
   color: #333;
+}
+
+/* Layout -- Grid */
+@media (min-width: 920px) {
+  .project {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+  }
+
+  .project h1 {
+    margin-block: 5rem 3rem !important;
+  }
+
+  .project .title {
+    grid-column: 1/12;
+    grid-row: 1/2;
+    padding-block: 1rem;
+  }
+
+  .project > .project-hero-image {
+    all: unset !important;
+    background-image: url("@/assets/images/costcutter/supermarket-interior.webp") !important;
+    background-position: center !important;
+    background-size: auto;
+    grid-column: 7/12 !important;
+    grid-row: 1/9 !important;
+    width: 100% !important;
+  }
+
+  .push-down {
+    margin-block: 1rem;
+  }
+
+  .orange {
+    object-fit: cover;
+    width: 8rem;
+    height: 25.5rem;
+    clip-path: inset(0 30% 0 0);
+    transform: scale(.95);
+    transition: 
+      clip-path .2s ease-out, 
+      opacity .4s ease-in-out,
+      transform .1s ease-in-out;
+    opacity: .6;
+  }
+
+  .orange:hover {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+  }
+
 }
 
 a {
