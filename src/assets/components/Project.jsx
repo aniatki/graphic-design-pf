@@ -1,9 +1,9 @@
 // Component imports
-import ColorPalette from '@/assets/components/ColorPalette'
-import ImageScroller from '@/assets/components/ImageScroller'
-import List from '@/assets/components/List'
-import LogoElements from '@/assets/components/logoElements'
-import TypographyList from '@/assets/components/TypographyList'
+import ColorPalette from './ColorPalette'
+import ImageScroller from './ImageScroller'
+import List from './List'
+import LogoElements from './logoElements'
+import TypographyList from './TypographyList'
 
 // Data imports
 import { contentBlocks } from '@/assets/projects/costcutter/projectContent'
