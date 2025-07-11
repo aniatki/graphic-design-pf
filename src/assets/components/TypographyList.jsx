@@ -1,4 +1,4 @@
-import { typographyList } from '@/assets/projects/costcutter/typographyList'
+import { typographyList } from '@/assets/projects/costcutter/typographyList.js'
 
 export default function TypographyList() {
     return (

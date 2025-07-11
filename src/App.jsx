@@ -1,5 +1,5 @@
 import '@/App.css'
-import Project from '@/assets/components/Project' 
+import Project from '@/assets/components/Project.jsx' 
 import supermarketInterior from '@/assets/images/costcutter/supermarket-interior.webp'
 
 export default function App() {

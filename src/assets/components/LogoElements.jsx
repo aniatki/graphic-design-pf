@@ -1,4 +1,4 @@
-import { logoElements } from '@/assets/projects/costcutter/logoElements'
+import { logoElements } from '@/assets/projects/costcutter/logoElements.js'
 
 export default function LogoElements() {
     return (

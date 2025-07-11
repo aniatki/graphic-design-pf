@@ -1,4 +1,4 @@
-import { listContent } from '@/assets/projects/costcutter/listContent'
+import { listContent } from '@/assets/projects/costcutter/listContent.js'
 
 export default function List() {
     return (
