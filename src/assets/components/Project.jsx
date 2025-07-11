@@ -90,6 +90,8 @@ export default function Project({ heroImage, projectTitle, heading }) {
       </h1>
 
       {contentBlocks.map(renderBlock)}
+
+      <iframe src="https://atki.ie/" frameBorder={0} ></iframe>
     </div>
   )
 }
