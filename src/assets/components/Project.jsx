@@ -16,18 +16,54 @@ const componentMap = {
   ColorPalette: <ColorPalette />
 }
 
+
 function renderBlock(block, index) {
+  const styleObject = {
+    gridColumn: block.gridCol, 
+    gridRow: block.gridRow,
+    maxWidth: block.maxWidth,  
+  }
   switch (block.type) {
     case 'paragraph':
-      return <p className={block.classes} key={index} style={{gridColumn: block.gridCol, gridRow: block.gridRow }}>{block.text}</p>
+      return <p 
+              className={block.classes} 
+              key={index} 
+              style={styleObject}
+              >{block.text}
+            </p>
     case 'heading':
-      return <h2 className={block.classes} key={index} style={{gridColumn: block.gridCol, gridRow: block.gridRow }}>{block.text}</h2>
+      return <h2 
+              className={block.classes} 
+              key={index} 
+              style={styleObject}
+              >{block.text}
+            </h2>
     case 'component':
-      return <div className={block.classes} key={index} style={{gridColumn: block.gridCol, gridRow: block.gridRow}}>{componentMap[block.name]}</div>
+      return <div 
+              className={block.classes} 
+              key={index} 
+              style={styleObject}
+              >{componentMap[block.name]}
+            </div>
     case 'image':
-      return <img className={block.classes} key={index} src={block.src} alt={block.alt || ''} style={{gridColumn: block.gridCol, gridRow: block.gridRow}}/>
+      return <img 
+              className={block.classes} 
+              key={index} 
+              src={block.src} 
+              alt={block.alt || ''} 
+              style={styleObject}
+              loading="lazy"/>
     case 'video':
-      return <video src={block.src} width={300} height={400} loop autoPlay muted className={block.classes} key={index} style={{gridColumn: block.gridCol, gridRow: block.gridRow}} />
+      return <video 
+              src={block.src} 
+              width={300} 
+              height={400} 
+              loop 
+              autoPlay 
+              muted 
+              className={block.classes} 
+              key={index} 
+              style={styleObject} />
     default:
       return null
   }

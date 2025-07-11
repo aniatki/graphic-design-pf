@@ -25,6 +25,10 @@ body {
   color: #333;
 }
 
+.orange {
+  display: none;
+}
+
 /* Layout -- Grid */
 @media (min-width: 920px) {
   .project {
@@ -57,6 +61,7 @@ body {
   }
 
   .orange {
+    display: block !important;
     object-fit: cover;
     width: 8rem;
     height: 25.5rem;
