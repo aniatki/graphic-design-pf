@@ -1,8 +1,8 @@
-import logo from '@/assets/images/costcutter/logo.svg'
-import orange from '@/assets/images/costcutter/orange.png'
-import orangeInWater from '@/assets/images/costcutter/orange-in-water.jpg'
-import orangeJuice from '@/assets/images/costcutter/orange-juice.mp4'
-import slicesOfOrange from '@/assets/images/costcutter/slices-of-orange.mp4'
+import logo from '../../images/costcutter/logo.svg'
+import orange from '../../images/costcutter/orange.png'
+import orangeInWater from '../../images/costcutter/orange-in-water.jpg'
+import orangeJuice from '../../images/costcutter/orange-juice.mp4'
+import slicesOfOrange from '../../images/costcutter/slices-of-orange.mp4'
 
 export const contentBlocks = [
   {

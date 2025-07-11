@@ -1,4 +1,4 @@
-import { colorPalette } from '@/assets/projects/costcutter/colorPalette.js'
+import { colorPalette } from '../projects/costcutter/colorPalette.js'
 
 export default function ColorPalette() {
     return (

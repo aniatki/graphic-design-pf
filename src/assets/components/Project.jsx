@@ -1,13 +1,13 @@
 // Component imports
-import ColorPalette from '@/assets/components/ColorPalette.jsx'
-import ImageScroller from '@/assets/components/ImageScroller.jsx'
-import List from '@/assets/components/List.jsx'
-import LogoElements from '@/assets/components/logoElements.jsx'
-import TypographyList from '@/assets/components/TypographyList.jsx'
+import ColorPalette from './ColorPalette.jsx'
+import ImageScroller from './ImageScroller.jsx'
+import List from './List.jsx'
+import LogoElements from './logoElements.jsx'
+import TypographyList from './TypographyList.jsx'
 
 // Data imports
-import { contentBlocks } from '@/assets/projects/costcutter/projectContent.js'
-import { colorPalette } from '@/assets/projects/costcutter/colorPalette.js'
+import { contentBlocks } from '../projects/costcutter/projectContent.js'
+import { colorPalette } from '../projects/costcutter/colorPalette.js'
 
 const componentMap = {
   List: <List />,
