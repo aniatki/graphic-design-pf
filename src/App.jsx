@@ -1,13 +1,12 @@
 import '@/App.css'
-import Project from '@/assets/components/Project.jsx' 
-import supermarketInterior from '@/assets/images/costcutter/supermarket-interior.webp'
+import { Routes, Route } from "react-router-dom"
+
+import Costcutter from './assets/pages/Costcutter'
 
 export default function App() {
-    return (
-    <Project 
-      heroImage={supermarketInterior}
-      projectTitle="Costcutter Clonshaugh"
-      heading="COSTCUTTER"
-      />
+  return (
+    <Routes>
+      <Route path="costcutter" element={<Costcutter />} />
+    </Routes>
   )
 }

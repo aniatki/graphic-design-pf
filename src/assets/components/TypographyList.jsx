@@ -1,6 +1,4 @@
-import { typographyList } from '../projects/costcutter/typographyList.js'
-
-export default function TypographyList() {
+export default function TypographyList({ typographyList } ) {
     return (
         <div className="typography-list">
             {typographyList.map((typeface, index) => (

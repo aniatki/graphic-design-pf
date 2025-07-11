@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function ImageScroller ({ src }) {
+export default function ImageScroller ({ projectHeroImage }) {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
@@ -19,12 +19,12 @@ export default function ImageScroller ({ src }) {
   return (
     <div
       className="project-hero-image"
-      aria-label="Supermarket Interior"
+      aria-label={projectHeroImage?.ariaLabel}
       role="img"
       style={{
         maxWidth: "90em",
         height: "25rem",
-        backgroundImage: `url(${src})`,
+        backgroundImage: `url(${projectHeroImage?.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

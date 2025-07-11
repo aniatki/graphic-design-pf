@@ -1,6 +1,4 @@
-import { listContent } from '../projects/costcutter/listContent.js'
-
-export default function List() {
+export default function List({ listContent }) {
     return (
         <ol>
             {listContent.map((elem, index) => (

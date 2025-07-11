@@ -1,6 +1,4 @@
-import { colorPalette } from '../projects/costcutter/colorPalette.js'
-
-export default function ColorPalette() {
+export default function ColorPalette( {colorPalette} ) {
     return (
         <div className="color-grid">
             {colorPalette.map((color, index) => (

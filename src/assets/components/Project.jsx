@@ -1,81 +1,59 @@
 // Component imports
-import ColorPalette from './ColorPalette.jsx'
-import ImageScroller from './ImageScroller.jsx'
-import List from './List.jsx'
-import LogoElements from './logoElements.jsx'
-import TypographyList from './TypographyList.jsx'
+import { ColorPalette, ImageScroller, List, LogoElements, TypographyList } from './'
 
 // Data imports
-import { contentBlocks } from '../projects/costcutter/projectContent.js'
-import { colorPalette } from '../projects/costcutter/colorPalette.js'
+import { contentBlocks, colorPalette, listContent, logoElements, projectHeroImage, typographyList } from '../projects/costcutter'
 
 const componentMap = {
-  List: <List />,
-  LogoElements: <LogoElements />,
-  TypographyList: <TypographyList />,
-  ColorPalette: <ColorPalette />
+  List: <List listContent={listContent} />,
+  LogoElements: <LogoElements logoElements={logoElements} />,
+  TypographyList: <TypographyList typographyList={typographyList} />,
+  ColorPalette: <ColorPalette colorPalette={colorPalette} />
 }
 
-
 function renderBlock(block, index) {
-  const styleObject = {
-    gridColumn: block.gridCol, 
-    gridRow: block.gridRow,
-    maxWidth: block.maxWidth,  
+  const commonProps = {
+    className: block.classes,
+    key: index,
+    style: {
+      gridColumn: block.gridCol,
+      gridRow: block.gridRow,
+      maxWidth: block.maxWidth,
+    },
   }
+
   switch (block.type) {
     case 'paragraph':
-      return <p 
-              className={block.classes} 
-              key={index} 
-              style={styleObject}
-              >{block.text}
-            </p>
+      return <p {...commonProps}>{block.text}</p>
     case 'heading':
-      return <h2 
-              className={block.classes} 
-              key={index} 
-              style={styleObject}
-              >{block.text}
-            </h2>
+      return <h2 {...commonProps}>{block.text}</h2>
     case 'component':
-      return <div 
-              className={block.classes} 
-              key={index} 
-              style={styleObject}
-              >{componentMap[block.name]}
-            </div>
+      return <div {...commonProps}>{componentMap[block.name]}</div>
     case 'image':
-      return <img 
-              className={block.classes} 
-              key={index} 
-              src={block.src} 
-              alt={block.alt || ''} 
-              style={styleObject}
-              loading="lazy"/>
+      return <img
+        {...commonProps}
+        src={block.src}
+        alt={block.alt || ''}
+        loading="lazy" />
     case 'video':
-      return <video 
-              src={block.src} 
-              width={300} 
-              height={400} 
-              loop 
-              autoPlay 
-              muted 
-              className={block.classes} 
-              key={index} 
-              style={styleObject} />
+      return <video
+        {...commonProps}
+        src={block.src}
+        loop
+        autoPlay
+        muted />
     default:
       return null
   }
 }
 
-export default function Project({ heroImage, projectTitle, heading }) {
+export default function Project({ projectTitle, heading }) {
   return (
     <div className="project">
-      <h4 className="title" style={{paddingBlock: "1.5rem"}}>
+      <h4 className="title" style={{ paddingBlock: "1.5rem" }}>
         <code>Project: </code>{projectTitle}
       </h4>
-      <ImageScroller src={heroImage}/>
+      <ImageScroller projectHeroImage={projectHeroImage} />
       <h1
         className="hero-heading"
         style={{
@@ -90,8 +68,6 @@ export default function Project({ heroImage, projectTitle, heading }) {
       </h1>
 
       {contentBlocks.map(renderBlock)}
-
-      <iframe src="https://atki.ie/" frameBorder={0} ></iframe>
     </div>
   )
 }
