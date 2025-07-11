@@ -1,6 +1,5 @@
 import '@/App.css'
 import { Routes, Route, useParams } from "react-router-dom"
-import {  } from 'react-router-dom'
 
 import Costcutter from './assets/pages/Costcutter.jsx'
 import Home from './assets/pages/Home.jsx'
