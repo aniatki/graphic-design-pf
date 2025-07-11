@@ -1,17 +1,7 @@
 // Component imports
 import { ColorPalette, ImageScroller, List, LogoElements, TypographyList } from './'
 
-// Data imports
-import { contentBlocks, colorPalette, listContent, logoElements, projectHeroImage, typographyList } from '../projects/costcutter'
-
-const componentMap = {
-  List: <List listContent={listContent} />,
-  LogoElements: <LogoElements logoElements={logoElements} />,
-  TypographyList: <TypographyList typographyList={typographyList} />,
-  ColorPalette: <ColorPalette colorPalette={colorPalette} />
-}
-
-function renderBlock(block, index) {
+function renderBlock(block, index, componentMap) {
   const commonProps = {
     className: block.classes,
     key: index,
@@ -47,7 +37,24 @@ function renderBlock(block, index) {
   }
 }
 
-export default function Project({ projectTitle, heading }) {
+export default function Project({ 
+  projectTitle, 
+  heading, 
+  contentBlocks, 
+  colorPalette, 
+  listContent, 
+  logoElements, 
+  projectHeroImage, 
+  typographyList 
+}) {
+
+  const componentMap = {
+    ColorPalette: <ColorPalette colorPalette={colorPalette} />,
+    List: <List listContent={listContent} />,
+    LogoElements: <LogoElements logoElements={logoElements} />,
+    TypographyList: <TypographyList typographyList={typographyList} />,
+  }
+
   return (
     <div className="project">
       <h4 className="title" style={{ paddingBlock: "1.5rem" }}>
@@ -59,7 +66,7 @@ export default function Project({ projectTitle, heading }) {
         style={{
           fontFamily: "system-ui, sans-serif",
           marginBlock: "30rem 3rem",
-          color: colorPalette[1].hex,
+          color: colorPalette && colorPalette.length > 1 ? colorPalette[1].hex : 'inherit',
           gridColumn: "1/7",
           gridRow: "2/3",
         }}
@@ -67,7 +74,7 @@ export default function Project({ projectTitle, heading }) {
         {heading}
       </h1>
 
-      {contentBlocks.map(renderBlock)}
+      {contentBlocks && contentBlocks.map((block, index) => renderBlock(block, index, componentMap))}
     </div>
   )
 }

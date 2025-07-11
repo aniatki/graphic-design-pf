@@ -1,4 +1,4 @@
-export default function ColorPalette( {colorPalette} ) {
+export default function ColorPalette({ colorPalette }) {
     return (
         <div className="color-grid">
             {colorPalette.map((color, index) => (
