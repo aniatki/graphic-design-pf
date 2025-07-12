@@ -1,0 +1,35 @@
+.container {
+    aspect-ratio: 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero {
+    background-color: rgba(1, 89, 65, 1);
+}
+
+.nest {
+    background-image: url('@/assets/images/costcutter/supermarket-interior.webp');
+    background-blend-mode: hard-light;
+    height: 100%;
+    background-size: cover;
+    opacity: .5;
+}
+
+.hero:first-of-type {
+    background-position: left top;
+    opacity: .5;
+    grid-column: 1/2;
+}
+
+.hero:nth-of-type(2) {
+    background-position: center top;
+    opacity: .7;
+    grid-column: 2/3;
+}
+
+.hero:last-of-type {
+    background-position: right top;
+    grid-column: 3/-1;
+}

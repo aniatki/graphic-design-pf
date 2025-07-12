@@ -1,8 +1,9 @@
 import Project from '@/assets/components/Project.jsx' 
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import loadProjectData from './loadProjectData.js'
 
-export default function Costcutter({ heading, projectTitle }) {
+export default function ProjectPage({ heading, projectTitle }) {
   const { projectName } = useParams()
 
   const [projectData, setProjectData] = useState(null)
@@ -14,19 +15,17 @@ export default function Costcutter({ heading, projectTitle }) {
     setLoading(true)
     setError(null)
 
-    async function loadProjectData() {
-      try {
-        const dataModule = await import(`../projects/${projectName}/index.js`)
-        setProjectData(dataModule)
-      } catch (err) {
-        console.error(`Failed to load project data for ${projectName}:`, err)
-        setError("Project not found or failed to load data.")
-      } finally {
-        setLoading(false)
-      }
+    async function fetchData() {
+    try {
+      const data = await loadProjectData(projectName)
+      setProjectData(data)
+    } catch (err) {
+      setError(err.message || "Error loading project")
+    } finally {
+      setLoading(false)
     }
-
-    if (projectName) loadProjectData()
+  }
+    if (projectName) fetchData()
   }, [projectName])
 
   if (loading) return <div>Loading project...</div>
