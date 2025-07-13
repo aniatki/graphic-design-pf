@@ -1,5 +1,5 @@
 export { default as ColorPalette } from './ColorPalette/ColorPalette.jsx'
 export { default as List } from './List.jsx'
-export { default as LogoElements } from './LogoElements.jsx' 
+export { default as LogoElements } from './LogoElements/LogoElements.jsx' 
 export { default as HeroImage } from './HeroImage/HeroImage.jsx' 
-export { default as TypographyList } from './TypographyList.jsx'
+export { default as TypographyList } from './TypographyList/TypographyList.jsx'
