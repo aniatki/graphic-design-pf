@@ -77,7 +77,6 @@ export const contentBlocks = [
     gridCol: "1/4",
     gridRow: "15/16",
     classes: "orange",
-    // maxWidth: "350px",
   },
   {
     type: 'video',
@@ -86,7 +85,6 @@ export const contentBlocks = [
     gridCol: "2/5",
     gridRow: "15/16",
     classes: "orange",
-    // maxWidth: "350px",
   },
   {
     type: 'image',
@@ -95,7 +93,6 @@ export const contentBlocks = [
     gridCol: "3/6",
     gridRow: "15/16",
     classes: "orange",
-    // maxWidth: "350px",
   },
   {
     type: 'video',
@@ -104,7 +101,6 @@ export const contentBlocks = [
     gridCol: "4/8",
     gridRow: "15/16",
     classes: "orange",
-    // maxWidth: "350px",
   },
   {
     type: 'paragraph',

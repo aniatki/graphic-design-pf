@@ -1,4 +1,4 @@
-import Project from '@/assets/components/Project.jsx' 
+import Project from '@/assets/components/Project.jsx'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import loadProjectData from './loadProjectData.js'
@@ -16,15 +16,15 @@ export default function ProjectPage({ heading, projectTitle }) {
     setError(null)
 
     async function fetchData() {
-    try {
-      const data = await loadProjectData(projectName)
-      setProjectData(data)
-    } catch (err) {
-      setError(err.message || "Error loading project")
-    } finally {
-      setLoading(false)
+      try {
+        const data = await loadProjectData(projectName)
+        setProjectData(data)
+      } catch (err) {
+        setError(err.message || "Error loading project")
+      } finally {
+        setLoading(false)
+      }
     }
-  }
     if (projectName) fetchData()
   }, [projectName])
 
@@ -35,22 +35,22 @@ export default function ProjectPage({ heading, projectTitle }) {
   const {
     contentBlocks,
     colorPalette,
+    heroImage,
     listContent,
     logoElements,
-    projectHeroImage,
     typographyList,
   } = projectData
 
   return (
-  <Project 
-    heading={heading}
-    projectTitle={projectTitle}
-    contentBlocks={contentBlocks}
-    colorPalette={colorPalette}
-    listContent={listContent}
-    logoElements={logoElements}
-    projectHeroImage={projectHeroImage}
-    typographyList={typographyList}
-  />
+    <Project
+      heading={heading}
+      projectTitle={projectTitle}
+      contentBlocks={contentBlocks}
+      colorPalette={colorPalette}
+      heroImage={heroImage}
+      listContent={listContent}
+      logoElements={logoElements}
+      typographyList={typographyList}
+    />
   )
 }

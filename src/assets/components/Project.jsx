@@ -1,51 +1,63 @@
 // Component imports
-import { ColorPalette, ImageScroller, List, LogoElements, TypographyList } from './'
+import { 
+  ColorPalette, 
+  List, 
+  LogoElements, 
+  HeroImage,
+  TypographyList 
+} from './'
 
 function renderBlock(block, index, componentMap) {
-  const commonProps = {
-    className: block.classes,
-    key: index,
-    style: {
-      gridColumn: block.gridCol,
-      gridRow: block.gridRow,
-      maxWidth: block.maxWidth,
-    },
+  const style = {
+    gridColumn: block.gridCol,
+    gridRow: block.gridRow,
+    maxWidth: block.maxWidth,
   }
+
+  const className = block.classes
 
   switch (block.type) {
     case 'paragraph':
-      return <p {...commonProps}>{block.text}</p>
+      return <p key={index} className={className} style={style}>{block.text}</p>
     case 'heading':
-      return <h2 {...commonProps}>{block.text}</h2>
+      return <h2 key={index} className={className} style={style}>{block.text}</h2>
     case 'component':
-      return <div {...commonProps}>{componentMap[block.name]}</div>
+      return <div key={index} className={className} style={style}>
+        {componentMap[block.name]}
+      </div>
     case 'image':
       return <img
-        {...commonProps}
+        key={index}
+        className={className}
+        style={style}
         src={block.src}
         alt={block.alt || ''}
-        loading="lazy" />
+        loading="lazy"
+      />
     case 'video':
       return <video
-        {...commonProps}
+        key={index}
+        className={className}
+        style={style}
         src={block.src}
         loop
         autoPlay
-        muted />
+        muted
+      />
     default:
       return null
   }
 }
 
-export default function Project({ 
-  projectTitle, 
-  heading, 
-  contentBlocks, 
-  colorPalette, 
-  listContent, 
-  logoElements, 
-  projectHeroImage, 
-  typographyList 
+export default function Project({
+  projectTitle,
+  heading,
+  contentBlocks,
+  colorPalette,
+  heroImage,
+  listContent,
+  logoElements,
+  typographyList
 }) {
 
   const componentMap = {
@@ -60,7 +72,7 @@ export default function Project({
       <h4 className="title" style={{ paddingBlock: "1.5rem" }}>
         <code>Project: </code>{projectTitle}
       </h4>
-      <ImageScroller projectHeroImage={projectHeroImage} />
+      <HeroImage heroImage={heroImage} />
       <h1
         className="hero-heading"
         style={{

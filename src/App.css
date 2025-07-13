@@ -8,6 +8,7 @@
   margin: 0 auto 3rem auto;
   max-width: 1400px;
   padding-inline: clamp(var(--spacing), 2vw, 5rem);
+
 }
 
 h1 {
@@ -41,64 +42,4 @@ h1 {
   min-width: max-content;
   font-family: "Franklin Gothic";
   font-size: 2.25rem;
-}
-
-/* Color Grid */
-
-.color-grid {
-  display: flex;
-  flex-direction: column;
-}
-
-.color-grid>.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
-  border-bottom: 2px solid rgb(241, 241, 241);
-}
-
-.color-grid>.row>span {
-  font-family: "Playfair Display" !important;
-}
-
-.color-grid>.row:nth-of-type(odd) {
-  background-color: rgba(255,255,255,.6);
-  position: relative;
-}
-
-.color-grid>.row:nth-of-type(odd)::before,
-.color-grid>.row:nth-of-type(odd)::after {
-  background-color: rgba(255,255,255,.6);
-  position: absolute;
-  content: '';
-  width: var(--spacing);
-  top: 0;
-  height: 100%;
-  z-index: -1;
-}
-
-.color-grid>.row:nth-of-type(odd)::before {
-  left: calc(-1 * var(--spacing));
-}
-
-
-.color-grid>.row:nth-of-type(odd)::after {
-  left: 100%;
-}
-
-.color-grid>.row>* {
-  margin: auto 0;
-}
-
-.color-grid .square {
-  width: 4em;
-  aspect-ratio: 1;
-  border-radius: .5rem;
-}
-
-.row>div>.row>span {
-  font-size: .75rem;
-}
-
-.row>span:last-of-type {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

@@ -1,35 +1,65 @@
 .container {
-    aspect-ratio: 3;
     width: 100%;
+    height: 50vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-block-end: -30rem;
 }
 
 .hero {
-    background-color: rgba(1, 89, 65, 1);
-}
-
-.nest {
-    background-image: url('@/assets/images/costcutter/supermarket-interior.webp');
-    background-blend-mode: hard-light;
-    height: 100%;
     background-size: cover;
-    opacity: .5;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 .hero:first-of-type {
     background-position: left top;
-    opacity: .5;
+    /* opacity: .05; */
     grid-column: 1/2;
+    filter: blur(5px);
 }
 
 .hero:nth-of-type(2) {
     background-position: center top;
-    opacity: .7;
+    /* opacity: .5; */
     grid-column: 2/3;
+    filter: blur(2px);
 }
 
 .hero:last-of-type {
     background-position: right top;
     grid-column: 3/-1;
+}
+
+@media (min-width: 920px) {
+    .container {
+        width: 100%;
+        height: 150vh;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        grid-column: 3/12;
+        grid-row: 1/9;
+        margin-inline-start: 10rem;
+    }
+
+    .hero:first-of-type {
+        background-position: left top;
+        opacity: .05;
+        grid-column: 1/2;
+        filter: blur(5px);
+    }
+
+    .hero:nth-of-type(2) {
+        background-position: center top;
+        opacity: .5;
+        grid-column: 2/3;
+        filter: blur(2px);
+    }
+
+    .hero:last-of-type {
+        background-position: right top;
+        grid-column: 3/-1;
+    }
+
 }

@@ -23,6 +23,7 @@
 body {
   position: relative;
   color: #333;
+  overflow-x: hidden;
 }
 
 .orange {
