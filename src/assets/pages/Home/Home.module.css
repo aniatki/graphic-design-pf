@@ -1,0 +1,103 @@
+.hero {
+    --crumb-size: .5em;
+    --logo-size: 4em;
+    --gap: .2rem;
+    --chevron-size: 3em;
+
+    height: 90vh;
+    position: relative;
+}
+
+.hero::after {
+    position: absolute;
+    inset: 0;
+    filter: url(#grain);
+    opacity: .2;
+    content: "";
+    pointer-events: none;
+}
+
+.svgContainer {
+    z-index: -10;
+    position: absolute;
+    inset: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-image: url('/logo.png');
+    background-size: cover;
+    width: var(--logo-size);
+    aspect-ratio: 2/3;
+}
+
+.breadcrumbs {
+    display: flex;
+    height: var(--crumb-size);
+    gap: var(--gap);
+    margin-inline-end: auto;
+    margin-inline-start: calc(50% + var(--gap) - var(--logo-size) * 1.5);
+}
+
+.breadcrumbs>* {
+    width: var(--crumb-size);
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background: black;
+}
+
+.crumb {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.active {
+    opacity: 1;
+}
+
+.titlecard {
+    font-family: 'Gloock';
+    font-size: 12vw;
+    text-align: center;
+    height: 50vh;
+    display: grid;
+    place-content: center;
+
+}
+
+.titlecard>a {
+    text-shadow: 3px 7px 50px rgba(0, 0, 0, 0);
+    transition: text-shadow .3s ease-in-out;
+}
+
+.titlecard>a:hover,
+.titlecard>a:focus {
+    text-shadow: 3px 7px 50px rgba(0, 0, 0, .3);
+}
+
+.bottomrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-start: 8rem;
+}
+
+.chevrons {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    cursor: pointer;
+}
+
+.chevrons>* {
+    width: var(--chevron-size);
+    aspect-ratio: 1;
+}
+
+.chevrons> :first-of-type {
+    transform: rotate(180deg)
+}

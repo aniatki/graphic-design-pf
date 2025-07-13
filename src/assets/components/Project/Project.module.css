@@ -1,0 +1,27 @@
+.title {
+    padding-block: 1.5rem;
+}
+
+.heading {
+    margin-block: 30rem 3rem;
+    width: max-content;
+}
+
+@media (min-width: 920px) {
+    .project {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+    }
+
+    .heading {
+        margin-block: 5rem 3rem;
+        grid-column: "1/10";
+        grid-row: "2/3";
+    }
+
+    .title {
+        grid-column: 1/12;
+        grid-row: 1/2;
+
+    }
+}

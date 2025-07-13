@@ -5,7 +5,9 @@ import {
   LogoElements, 
   HeroImage,
   TypographyList 
-} from './'
+} from '..'
+
+import styles from "./Project.module.css"
 
 function renderBlock(block, index, componentMap) {
   const style = {
@@ -68,19 +70,15 @@ export default function Project({
   }
 
   return (
-    <div className="project">
-      <h4 className="title" style={{ paddingBlock: "1.5rem" }}>
+    <div className={styles.project}>
+      <h4 className={styles.title}>
         <code>Project: </code>{projectTitle}
       </h4>
       <HeroImage heroImage={heroImage} />
       <h1
-        className="hero-heading"
+        className={styles.heading}
         style={{
-          fontFamily: "system-ui, sans-serif",
-          marginBlock: "30rem 3rem",
           color: colorPalette && colorPalette.length > 1 ? colorPalette[1].hex : 'inherit',
-          gridColumn: "1/7",
-          gridRow: "2/3",
         }}
       >
         {heading}

@@ -1,7 +1,7 @@
 import '@/App.css'
 import { Routes, Route, useParams } from "react-router-dom"
 
-import Home from './assets/pages/Home.jsx'
+import Home from './assets/pages/Home/Home.jsx'
 import ProjectPage from './assets/pages/ProjectPage.jsx'
 
 function GetProjectPage() {
@@ -9,9 +9,9 @@ function GetProjectPage() {
 
   switch (projectName) {
     case 'costcutter':
-      return <ProjectPage heading="COSTCUTTER" projectTitle="Costcutter Clonshaugh" />
+      return <ProjectPage heading="Costcutter" projectTitle="Costcutter Clonshaugh" />
     case 'cosmic-brew':
-      return <ProjectPage heading="COSMIC BREW" projectTitle="Cosmic Brew" />
+      return <ProjectPage heading="Cosmic Brew" projectTitle="Cosmic Brew" />
     default:
       return <div>Project not found</div>
   }

@@ -1,4 +1,4 @@
-import Project from '@/assets/components/Project.jsx'
+import Project from '@/assets/components/Project/Project.jsx'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import loadProjectData from './loadProjectData.js'

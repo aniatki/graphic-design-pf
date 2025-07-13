@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-block-end: -30rem;
+    position: relative;
+    z-index: -10;
 }
 
 .hero {
@@ -14,16 +16,19 @@
 
 .hero:first-of-type {
     background-position: left top;
-    /* opacity: .05; */
     grid-column: 1/2;
-    filter: blur(5px);
+    filter: 
+        blur(5px)
+        saturate(0);
 }
 
 .hero:nth-of-type(2) {
     background-position: center top;
-    /* opacity: .5; */
     grid-column: 2/3;
-    filter: blur(2px);
+    filter: 
+        blur(2px)
+        saturate(0.5);
+        ;
 }
 
 .hero:last-of-type {
