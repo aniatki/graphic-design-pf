@@ -1,42 +1,33 @@
 import styles from './HeroImage.module.css'
 import { useState, useEffect } from "react"
- 
+
 export default function HeroImage({ heroImage }) {
-      const [opacity, setOpacity] = useState(2);
+    const [opacity, setOpacity] = useState(1);
 
-      useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
-          const scrollY = window.scrollY;
-          const fadePoint = 200
-          const newOpacity = Math.max(1 - scrollY / fadePoint, 0);
-          setOpacity(newOpacity)
+            const scrollY = window.scrollY;
+            const fadePoint = 1000
+            const newOpacity = Math.max(1 - scrollY / fadePoint, 0);
+            setOpacity(newOpacity)
         };
-    
-        window.addEventListener('scroll', handleScroll)
-    
-        return () => window.removeEventListener('scroll', handleScroll);
-      }, [])
 
-      return (
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [])
+
+    return (
         <div className={styles.container} style={{ opacity: opacity }}>
-            <div 
-                className={styles.hero} 
-                style={{ backgroundImage: `url(${heroImage?.src})` }}
-            >
-                <div className={styles.nest}></div>
-            </div>
-            <div 
-                className={styles.hero} 
-                style={{ backgroundImage: `url(${heroImage?.src})` }}
-            >
-                <div className={styles.nest}></div>
-            </div>
-            <div 
-                className={styles.hero} 
-                style={{ backgroundImage: `url(${heroImage?.src})` }}
-            >
-                <div className={styles.nest}></div>
-            </div>
+            {[0, 1, 2].map((_, index) => (
+                <div
+                    key={index}
+                    className={styles.hero}
+                    style={{ backgroundImage: `url(${heroImage?.src})` }}
+                >
+                    <div className={styles.nest}></div>
+                </div>
+            ))}
         </div>
     )
 }

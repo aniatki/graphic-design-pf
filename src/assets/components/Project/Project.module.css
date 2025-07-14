@@ -7,10 +7,40 @@
     width: max-content;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar > a {
+    color: black;
+    position: relative;
+    margin-inline-end: 1rem;
+}
+
+.navbar > a:last-child:after {
+    position: absolute;
+    content: '';
+    inset: -5px -10px;
+    background: rgba(255,255,255,.7);
+    z-index: -1;
+    border-radius: 50vw;
+    border: 2px solid rgba(0,0,0,.4);
+}
+
 @media (min-width: 920px) {
     .project {
         display: grid;
         grid-template-columns: repeat(6, auto);
+        gap: 2rem;
+    }
+
+    .navwrapper {
+        grid-column: 6/11;
+        grid-row: 1/2;
+        position: relative;
+        z-index: 10;
     }
 
     .heading {

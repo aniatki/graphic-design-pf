@@ -7,8 +7,11 @@ import {
   TypographyList 
 } from '..'
 
+import Logo from '@/assets/components/Logo/Logo.jsx'
 import styles from "./Project.module.css"
 
+import { Link } from 'react-router-dom'
+ 
 function renderBlock(block, index, componentMap) {
   const style = {
     gridColumn: block.gridCol,
@@ -40,7 +43,6 @@ function renderBlock(block, index, componentMap) {
       return <video
         key={index}
         className={className}
-        style={style}
         src={block.src}
         loop
         autoPlay
@@ -71,6 +73,10 @@ export default function Project({
 
   return (
     <div className={styles.project}>
+      <div className={styles.navbar}>
+        <Logo />
+        <Link to={"/"}>Home</Link>
+      </div>
       <h4 className={styles.title}>
         <code>Project: </code>{projectTitle}
       </h4>

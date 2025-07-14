@@ -28,18 +28,10 @@
     align-items: center;
 }
 
-.logo {
-    background-image: url('/logo.png');
-    background-size: cover;
-    width: var(--logo-size);
-    aspect-ratio: 2/3;
-}
-
 .breadcrumbs {
     display: flex;
     height: var(--crumb-size);
     gap: var(--gap);
-    margin-inline-end: auto;
     margin-inline-start: calc(50% + var(--gap) - var(--logo-size) * 1.5);
 }
 
@@ -61,15 +53,16 @@
 
 .titlecard {
     font-family: 'Gloock';
-    font-size: 12vw;
+    font-size: clamp(3.7rem, 2rem + 5vw, 12vw);
     text-align: center;
     height: 50vh;
     display: grid;
     place-content: center;
-
+    min-width: max-content;
 }
 
 .titlecard>a {
+    color: black;
     text-shadow: 3px 7px 50px rgba(0, 0, 0, 0);
     transition: text-shadow .3s ease-in-out;
 }

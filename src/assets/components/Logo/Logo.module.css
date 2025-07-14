@@ -1,0 +1,8 @@
+.logo {
+    --logo-size: 4em;
+
+    background-image: url('/logo.png');
+    background-size: cover;
+    width: var(--logo-size);
+    aspect-ratio: 2/3;
+}

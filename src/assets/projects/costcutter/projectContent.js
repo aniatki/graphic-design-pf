@@ -1,8 +1,5 @@
 import logo from '../../images/costcutter/logo.svg'
-import orange from '../../images/costcutter/orange.png'
-import orangeInWater from '../../images/costcutter/orange-in-water.jpg'
 import orangeJuice from '../../images/costcutter/orange-juice.mp4'
-import slicesOfOrange from '../../images/costcutter/slices-of-orange.mp4'
 
 export const contentBlocks = [
   {
@@ -71,35 +68,9 @@ export const contentBlocks = [
     classes: "push-down final-logo",
   },
   {
-    type: 'image',
-    src: orange,
-    alt: 'Sliced Orange',
-    gridCol: "1/4",
-    gridRow: "15/16",
-    classes: "orange",
-  },
-  {
     type: 'video',
     src: orangeJuice,
     alt: 'Orange Juice',
-    gridCol: "2/5",
-    gridRow: "15/16",
-    classes: "orange",
-  },
-  {
-    type: 'image',
-    src: orangeInWater,
-    alt: 'Orange in Water',
-    gridCol: "3/6",
-    gridRow: "15/16",
-    classes: "orange",
-  },
-  {
-    type: 'video',
-    src: slicesOfOrange,
-    alt: 'Slices of Orange',
-    gridCol: "4/8",
-    gridRow: "15/16",
     classes: "orange",
   },
   {

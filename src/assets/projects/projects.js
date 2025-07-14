@@ -7,16 +7,16 @@ export const projects = [
     {
         title: "Cosmic Brew",
         description: "Coffee shop in outter space.",
-        to: "/cosmic-brew",
+        to: "/",
     },
     {
         title: "Kamela Nails",
         description: "Nail salon in North Dublin.",
-        to: "/kamela-nails",
+        to: "/",
     },
     {
         title: "Dreamwear",
         description: "Online fashion shop.",
-        to: "/dreamwear",
+        to: "/",
     },
 ]

@@ -2,26 +2,20 @@ import styles from './Home.module.css'
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import { projects } from "../../projects/projects.js"
+import Logo from "../../components/Logo/Logo.jsx"
 
 export default function Home() {
     const [index, setIndex] = useState(0)
 
-    
-    function downIndex() {
-        if (index == 0) return
-        setIndex(index - 1)
-    }
-    function upIndex() {
-        if (index == 3) return
-        setIndex(index + 1)
-    }
+    function downIndex() {index === 0 ? setIndex(0) : setIndex(index - 1)}
+    function upIndex() {index === 3 ? setIndex(3) : setIndex(index + 1)}
 
     return (
         <main className={styles.hero}>
             <div className={styles.svgContainer}>
                 <svg>
                     <filter id="grain">
-                        <feTurbulence 
+                        <feTurbulence
                             type="turbulence"
                             baseFrequency={.7}
                         />
@@ -29,9 +23,7 @@ export default function Home() {
                 </svg>
             </div>
             <div className={styles.navbar}>
-                
-                    <Link to={"https://atki.ie/"}><div className={styles.logo}></div></Link>
-                
+                <Logo />
                 <div className={styles.breadcrumbs}>
                     {[0, 1, 2, 3].map((i) => (
                         <div
