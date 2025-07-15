@@ -14,12 +14,11 @@ export const contentBlocks = [
     text: 'Target audience:',
     gridCol: "1/6",
     gridRow: "5",
-    classes: "push-down"
   },
   {
     type: 'component',
     name: 'List',
-    gridCol: "1/6",
+    gridCol: "1/7",
     gridRow: "6",
   },
   {
@@ -65,7 +64,6 @@ export const contentBlocks = [
     alt: 'Final Costcutter logo',
     gridCol: "6/11",
     gridRow: "9",
-    classes: "push-down final-logo",
   },
   {
     type: 'video',

@@ -1,8 +1,8 @@
 import styles from './Home.module.css'
-import { Link } from "react-router-dom"
 import { useState } from "react"
 import { projects } from "../../projects/projects.js"
 import Logo from "../../components/Logo/Logo.jsx"
+import Tilt from "./Tilt.jsx"
 
 export default function Home() {
     const [index, setIndex] = useState(0)
@@ -33,7 +33,7 @@ export default function Home() {
                     ))}
                 </div>
             </div>
-            <div className={styles.titlecard}><Link to={projects[index]?.to}>{projects[index]?.title}</Link></div>
+            <Tilt href={projects[index]?.to} title={projects[index]?.title}/>
             <div className={styles.bottomrow}>
                 <div className={styles.description}>{projects[index]?.description}</div>
                 <div className={styles.chevrons}>

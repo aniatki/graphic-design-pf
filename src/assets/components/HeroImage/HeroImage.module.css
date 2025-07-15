@@ -20,6 +20,8 @@
     filter: 
         blur(5px)
         saturate(0);
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
 }
 
 .hero:nth-of-type(2) {
@@ -34,6 +36,8 @@
 .hero:last-of-type {
     background-position: right top;
     grid-column: 3/-1;
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
 }
 
 @media (min-width: 920px) {
