@@ -1,0 +1,27 @@
+
+.appIcons {
+    grid-column: 1/12;
+    grid-row: 17;
+    margin-inline: auto;
+    margin-block-start: -20rem;
+    display: grid;
+    place-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.appIcons > img {
+    max-width: 300px;
+}
+
+.appIcons > h3 {
+    margin-block-start: 1rem;
+    text-align: center;
+}
+
+
+@media (min-width: 920px) {
+    .appIcons {
+        margin-block-start: -30rem;
+    }
+}

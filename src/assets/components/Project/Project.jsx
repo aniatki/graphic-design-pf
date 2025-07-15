@@ -1,5 +1,6 @@
 // Component imports
 import {
+  AppIcons,
   ColorPalette,
   List,
   Logo,
@@ -10,6 +11,7 @@ import {
 } from '..'
 import styles from "./Project.module.css"
 import { Link } from 'react-router-dom'
+import Icon from "../AppIcons/Icon.jsx"
 
 function renderBlock(block, index, componentMap) {
   const style = {
@@ -75,9 +77,7 @@ export default function Project({
     <div className={styles.project}>
       <div className={styles.navbar}>
         <Logo />
-        <h4 className={styles.title}>
-          <code>Project: </code>{projectTitle}
-        </h4>
+        <h4 className={styles.title}>{projectTitle}</h4>
         <Link to={"/"}>Home</Link>
       </div>
       <HeroImage heroImage={heroImage}/>
@@ -92,6 +92,8 @@ export default function Project({
 
       {contentBlocks && contentBlocks.map((block, index) => renderBlock(block, index, componentMap))}
       <ParallaxImage />
+      {/* <AppIcons /> */}
+      <Icon />
     </div>
   )
 }

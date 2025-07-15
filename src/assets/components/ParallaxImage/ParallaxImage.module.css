@@ -12,26 +12,23 @@
     transform: rotate(90deg);
     position: absolute;
     transition: transform 0.05s linear;
-    bottom: -150%;
+    bottom: -75%;
 }
 
 .name > * {
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, .9);
     font-family: "Franklin Gothic", system-ui, sans-serif;
-    font-weight: 500;
+    font-weight: 900;
     line-height: .8;
-    font-size: 5rem;
+    font-size: 3.5rem;
 }
 
 .image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: .5em;
     transform: translateY(-50%);
-    filter: 
-        hue-rotate(-20deg)
-        brightness(1.5)
-        saturate(1.2)
-    ;
 }
 
 @media (min-width: 920px) {

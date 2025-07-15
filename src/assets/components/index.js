@@ -1,3 +1,4 @@
+export { default as AppIcons } from './AppIcons/AppIcons.jsx'
 export { default as ColorPalette } from './ColorPalette/ColorPalette.jsx'
 export { default as HeroImage } from './HeroImage/HeroImage.jsx' 
 export { default as List } from './List.jsx'

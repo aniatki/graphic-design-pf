@@ -29,7 +29,6 @@ export default function ParallaxImage() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
-
     return (
         <div className={styles.container}>
             <div ref={ref}
