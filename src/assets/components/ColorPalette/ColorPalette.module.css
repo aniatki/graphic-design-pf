@@ -42,6 +42,7 @@
   width: 4em;
   aspect-ratio: 1;
   border-radius: .5rem;
+  color: white;
 }
 
 .row>div>.row>.span {

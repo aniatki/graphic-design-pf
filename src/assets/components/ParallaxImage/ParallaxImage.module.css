@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    border-radius: .5em;
+    height: 45em;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transform: rotate(90deg);
+    position: absolute;
+    transition: transform 0.05s linear;
+    bottom: -150%;
+}
+
+.name > * {
+    color: rgba(255, 255, 255, .8);
+    font-family: "Franklin Gothic", system-ui, sans-serif;
+    font-weight: 500;
+    line-height: .8;
+    font-size: 5rem;
+}
+
+.image {
+    width: 100%;
+    border-radius: .5em;
+    transform: translateY(-50%);
+    filter: 
+        hue-rotate(-20deg)
+        brightness(1.5)
+        saturate(1.2)
+    ;
+}
+
+@media (min-width: 920px) {
+    .container {
+        grid-column: 1/12;
+        grid-row: 16;
+    }
+
+    .image {
+        transform: translateY(-60%);
+    }
+}

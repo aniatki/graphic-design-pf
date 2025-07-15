@@ -5,6 +5,7 @@ import {
   Logo,
   LogoElements,
   HeroImage,
+  ParallaxImage,
   TypographyList
 } from '..'
 import styles from "./Project.module.css"
@@ -67,6 +68,7 @@ export default function Project({
     List: <List listContent={listContent} />,
     LogoElements: <LogoElements logoElements={logoElements} />,
     TypographyList: <TypographyList typographyList={typographyList} />,
+
   }
 
   return (
@@ -89,6 +91,7 @@ export default function Project({
       </h1>
 
       {contentBlocks && contentBlocks.map((block, index) => renderBlock(block, index, componentMap))}
+      <ParallaxImage />
     </div>
   )
 }

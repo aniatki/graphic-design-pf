@@ -1,6 +1,7 @@
 export { default as ColorPalette } from './ColorPalette/ColorPalette.jsx'
+export { default as HeroImage } from './HeroImage/HeroImage.jsx' 
 export { default as List } from './List.jsx'
 export { default as Logo } from './Logo/Logo.jsx' 
 export { default as LogoElements } from './LogoElements/LogoElements.jsx' 
-export { default as HeroImage } from './HeroImage/HeroImage.jsx' 
+export { default as ParallaxImage } from './ParallaxImage/ParallaxImage.jsx' 
 export { default as TypographyList } from './TypographyList/TypographyList.jsx'

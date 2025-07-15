@@ -38,6 +38,7 @@ export default function ProjectPage({ heading, projectTitle }) {
     heroImage,
     listContent,
     logoElements,
+    parallaxImage,
     typographyList,
   } = projectData
 
@@ -50,6 +51,7 @@ export default function ProjectPage({ heading, projectTitle }) {
       heroImage={heroImage}
       listContent={listContent}
       logoElements={logoElements}
+      parallaxImage={parallaxImage}
       typographyList={typographyList}
     />
   )

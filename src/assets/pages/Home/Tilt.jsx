@@ -23,7 +23,7 @@ export default function TiltComponent({ href, title }) {
   }, [])
 
   return (
-    <div ref={tiltRef}  data-tilt className={styles.titlecard}>
+    <div ref={tiltRef} data-tilt className={styles.titlecard}>
       <Link to={href}>{title}</Link>
     </div>
   )

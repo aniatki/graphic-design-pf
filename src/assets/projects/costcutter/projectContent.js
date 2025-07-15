@@ -4,7 +4,7 @@ import orangeJuice from '../../images/costcutter/orange-juice.mp4'
 export const contentBlocks = [
   {
     type: 'paragraph',
-    text: "Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! No, I'm Santa Claus! I guess because my parents keep telling me to be more ladylike. As though!",
+    text: "Costcutter is a well-established convenience store and supermarket chain operating across Ireland, including numerous locations throughout Dublin. Known for its strong presence in both residential neighbourhoods and city centre areas, Costcutter offers a mix of everyday groceries, fresh produce, chilled foods, baked goods, and household essentials. The stores are typically smaller in size than full-scale supermarkets, making them ideal for quick shopping trips and top-up purchases.",
     gridCol: "1/6",
     gridRow: "4",
     margin: "-7rem 0 0 0",

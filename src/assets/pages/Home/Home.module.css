@@ -59,6 +59,7 @@
     display: grid;
     place-content: center;
     min-width: max-content;
+    position: relative;
 }
 
 .titlecard>a {
@@ -69,7 +70,7 @@
 
 .titlecard>a:hover,
 .titlecard>a:focus {
-    text-shadow: 3px 7px 50px rgba(0, 0, 0, .3);
+    text-shadow: 3px 7px 50px rgba(0, 0, 0, .1);
 }
 
 .bottomrow {

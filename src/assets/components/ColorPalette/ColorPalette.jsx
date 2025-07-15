@@ -1,11 +1,12 @@
 import styles from './ColorPalette.module.css'
+import ColorSquare from './ColorSquare.jsx'
 
 export default function ColorPalette({ colorPalette }) {
-    return (
+     return (
         <div className={styles.grid}>
             {colorPalette.map((color, index) => (
                 <div key={index} className={styles.row}>
-                    <div className={styles.square} style={{ backgroundColor: color.hex }}></div>
+                    <ColorSquare color={color.hex} />
                     <span className={styles.span}>{color.name}</span>
                     <div>
                         <div className={styles.row}><span>Hex: </span><code>{color.hex}</code></div>
@@ -15,5 +16,5 @@ export default function ColorPalette({ colorPalette }) {
                 </div>
             ))}
         </div>
-    );
-};
+    )
+}
