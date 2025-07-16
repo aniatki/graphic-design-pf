@@ -42,7 +42,7 @@ export default function ParallaxImage() {
                     <span key={index}>Costcutter</span>
                 ))}
             </div>
-            <img className={styles.image} src={parallaxImage.src} alt={parallaxImage.alt} />
+            <div className={styles.image} style={{backgroundImage: `url(${parallaxImage.src})` }} aria-description={parallaxImage.alt} />
         </div>
     )
 }

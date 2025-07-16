@@ -19,15 +19,12 @@ export default function HeroImage({ heroImage }) {
 
     return (
         <div className={styles.container} style={{ opacity: opacity }}>
-            {[0, 1, 2].map((_, index) => (
-                <div
-                    key={index}
-                    className={styles.hero}
-                    style={{ backgroundImage: `url(${heroImage?.src})` }}
-                >
-                    <div className={styles.nest}></div>
-                </div>
-            ))}
+            <div
+                className={styles.hero}
+                style={{ backgroundImage: `url(${heroImage?.src})` }}
+            >
+                <div className={styles.nest}></div>
+            </div>
         </div>
     )
 }

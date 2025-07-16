@@ -1,8 +1,7 @@
 .container {
     position: relative;
-    overflow: hidden;
     border-radius: .5em;
-    height: 45em;
+    overflow: hidden;
 }
 
 .name {
@@ -12,7 +11,7 @@
     transform: rotate(90deg);
     position: absolute;
     transition: transform 0.05s linear;
-    bottom: -75%;
+    bottom: -170%;
 }
 
 .name > * {
@@ -25,19 +24,14 @@
 
 .image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: .5em;
-    transform: translateY(-50%);
+    height: 30em;
+    background-size: cover;
+    background-position: bottom;
 }
 
 @media (min-width: 920px) {
     .container {
         grid-column: 1/12;
         grid-row: 16;
-    }
-
-    .image {
-        transform: translateY(-60%);
     }
 }

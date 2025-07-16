@@ -4,8 +4,9 @@ import {
   ColorPalette,
   List,
   Logo,
-  LogoElements,
   HeroImage,
+  LogoElements,
+  Masonry,
   ParallaxImage,
   TypographyList
 } from '..'
@@ -93,7 +94,8 @@ export default function Project({
       {contentBlocks && contentBlocks.map((block, index) => renderBlock(block, index, componentMap))}
       <ParallaxImage />
       {/* <AppIcons /> */}
-      <Icon />
+      {/* <Icon /> */}
+      <Masonry />
     </div>
   )
 }
