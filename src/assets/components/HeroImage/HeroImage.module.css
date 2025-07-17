@@ -22,14 +22,14 @@
     }
     
     .hero {
-        background-size: 120%;
+        background-size: 100%;
     }
 
     .hero::after {
         position: absolute;
         content: '';
         inset: -20% 0 -20% 0;
-        background-color: #015941;
+        background-image: linear-gradient(to right, #17593c, #1e6e4b, #17533c);
         z-index: -1;
         border-radius: .5em;
     }

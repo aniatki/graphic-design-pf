@@ -41,11 +41,13 @@ h3 {
     margin-block: 2rem;
     border-radius: .5em;
     filter: saturate(0);
-    transition: filter 500ms ease-in-out;
+    transform: scale(1);
+    transition: filter 500ms ease-in-out, transform 300ms ease;
 }
 
 .orange:hover {
   filter: saturate(1);
+  transform: scale(.95);
 }
 
 @media (min-width: 920px) {
