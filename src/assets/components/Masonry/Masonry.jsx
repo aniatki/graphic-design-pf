@@ -3,13 +3,14 @@ import informative from '../../images/costcutter/social_media/informative.jpg'
 import special from '../../images/costcutter/social_media/special.jpg'
 import standard from '../../images/costcutter/social_media/standard.jpg'
 import orangesMockup from "../../images/costcutter/oranges-mockup.jpg"
+import ImageSquare from "./ImageSquare.jsx"
 
 export default function Masonry() {
     return (
         <>
             <div className={styles.masonry}>
                 {[informative, special, standard, orangesMockup].map((el, index) => (
-                    <div key={index} style={{ backgroundImage: `url(${el})` }}></div>
+                    <ImageSquare key={index} bgUrl={el} />
                 ))}
             </div>
         </>

@@ -5,4 +5,28 @@
     background-size: cover;
     width: var(--logo-size);
     aspect-ratio: 2/3;
+    position: relative;
+}
+
+.logo::before {
+    --scale: 0;
+
+    position: absolute;
+    content: "Chat with me @ atki.ie";
+    bottom: calc(var(--logo-size) / 16);
+    left: 100%;
+    padding: .5rem;
+    width: max-content;
+    
+    transform: translateY(-50%) scaleX(var(--scale));
+    transform-origin: left;
+    
+    background-color: rgba(0,0,0,.7);
+    border-radius: .5em;
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+    transition: .1s transform ;
+}
+
+.logo:hover::before {
+    --scale: 1;
 }

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: repeat(auto-fill, 10px);
-  gap: .5em;
+  gap: 2em;
 }
 
 .masonry > div {

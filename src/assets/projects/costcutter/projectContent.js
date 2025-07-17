@@ -63,7 +63,7 @@ export const contentBlocks = [
     src: logo,
     alt: 'Final Costcutter logo',
     gridCol: "6/11",
-    gridRow: "9",
+    gridRow: "8",
   },
   {
     type: 'video',
@@ -75,24 +75,24 @@ export const contentBlocks = [
     type: 'paragraph',
     text: "The typography choice was this very bold, sans serif font:",
     gridCol: "7/12",
-    gridRow: "10",
+    gridRow: "9",
   },
   {
     type: 'component',
     name: 'TypographyList',
     gridCol: "7/12",
-    gridRow: "11/13",
+    gridRow: "10/12",
   },
   {
     type: 'paragraph',
     text: "As for the colours, the original palette was kept, as I didn't want to stray too far off the original... for obvious reasons.",
     gridCol: "7/12",
-    gridRow: "14",
+    gridRow: "13",
   },
   {
     type: 'component',
     name: 'ColorPalette',
     gridCol: "7/12",
-    gridRow: "15",
+    gridRow: "14",
   },
 ]

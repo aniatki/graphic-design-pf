@@ -1,5 +1,6 @@
 .container {
     height: 50vh;
+    max-height: 450px;
     margin-block-end: -30rem;
     position: relative;
     z-index: -10;
@@ -9,13 +10,27 @@
     height: 100%;
     border-radius: .5em;
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 @media (min-width: 920px) {
     .container {
-        height: 120vh;
-
         grid-column: 6/12;
-        grid-row: 1/9;
+        grid-row: 3/9;
+    }
+    
+    .hero {
+        background-size: 120%;
+    }
+
+    .hero::after {
+        position: absolute;
+        content: '';
+        inset: -20% 0 -20% 0;
+        background-color: #015941;
+        z-index: -1;
+        border-radius: .5em;
     }
 }
