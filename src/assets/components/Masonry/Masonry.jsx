@@ -5,10 +5,10 @@ import standard from '../../images/costcutter/social_media/standard.jpg'
 import orangesMockup from "../../images/costcutter/oranges-mockup.jpg"
 import ImageSquare from "./ImageSquare.jsx"
 
-export default function Masonry() {
+export default function Masonry({ customClass }) {
     return (
         <>
-            <div className={styles.masonry}>
+            <div className={`${styles.masonry} ${customClass}`}>
                 {[informative, special, standard, orangesMockup].map((el, index) => (
                     <ImageSquare key={index} bgUrl={el} />
                 ))}

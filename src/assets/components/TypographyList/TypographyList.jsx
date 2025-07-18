@@ -1,8 +1,8 @@
 import styles from "./TypographyList.module.css"
 
-export default function TypographyList({ typographyList } ) {
+export default function TypographyList({ customClass, typographyList } ) {
     return (
-        <div className={styles.typography}>
+        <div className={`${styles.typography} ${customClass}`}>
             {typographyList.map((typeface, index) => (
                 <p
                     key={index}

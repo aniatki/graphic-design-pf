@@ -1,7 +1,4 @@
 .container {
-    height: 50vh;
-    max-height: 450px;
-    margin-block-end: -30rem;
     position: relative;
     z-index: -10;
 }
@@ -10,27 +7,20 @@
     height: 100%;
     border-radius: .5em;
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
 }
 
-@media (min-width: 920px) {
-    .container {
-        grid-column: 6/12;
-        grid-row: 3/9;
-    }
-    
+@media (max-aspect-ratio: 2/3) {
     .hero {
-        background-size: 100%;
+        background-position: top;
+        background-size: 130%;
     }
+}
 
-    .hero::after {
-        position: absolute;
-        content: '';
-        inset: -20% 0 -20% 0;
-        background-image: linear-gradient(to right, #17593c, #1e6e4b, #17533c);
-        z-index: -1;
-        border-radius: .5em;
+@media (max-aspect-ratio: 3/5) {
+    .hero {
+        max-height: 50vh;
     }
 }

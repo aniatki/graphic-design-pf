@@ -7,8 +7,8 @@ import Tilt from "./Tilt.jsx"
 export default function Home() {
     const [index, setIndex] = useState(0)
 
-    function downIndex() {index === 0 ? setIndex(0) : setIndex(index - 1)}
-    function upIndex() {index === 3 ? setIndex(3) : setIndex(index + 1)}
+    // function downIndex() {index === 0 ? setIndex(0) : setIndex(index - 1)}
+    // function upIndex() {index === 3 ? setIndex(3) : setIndex(index + 1)}
 
     return (
         <main className={styles.hero}>
@@ -25,7 +25,7 @@ export default function Home() {
             <div className={styles.navbar}>
                 <Logo />
                 <div className={styles.breadcrumbs}>
-                    {[0, 1, 2, 3].map((i) => (
+                    {[0].map((i) => (
                         <div
                             key={i}
                             className={`${styles.crumb} ${index === i ? styles.active : ''}`}
@@ -37,8 +37,18 @@ export default function Home() {
             <div className={styles.bottomrow}>
                 <div className={styles.description}>{projects[index]?.description}</div>
                 <div className={styles.chevrons}>
-                    <img onClick={downIndex} src={"/chevron.svg"} style={{ opacity: index === 0 ? .1 : 1, }} alt="" />
-                    <img onClick={upIndex} src={"/chevron.svg"} style={{ opacity: index === 3 ? .1 : 1, }} alt="" />
+                    <img 
+                        // onClick={downIndex} 
+                        src={"/chevron.svg"} 
+                        style={{ opacity: index === 0 ? .1 : 1, }} 
+                        alt="Arrow Left" 
+                        />
+                    <img 
+                        // onClick={upIndex} 
+                        src={"/chevron.svg"} 
+                        style={{ opacity: index === 3 ? .1 : 1, }} 
+                        alt="Arrow Right" 
+                        />
                 </div>
             </div>
         </main>

@@ -1,0 +1,164 @@
+.project {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.navbar {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .1), rgba(255, 255, 255, .3));
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid rgba(255, 255, 255, .6);
+}
+
+.navbar>a {
+    color: rgba(0, 0, 0, .9);
+    letter-spacing: -1.3px;
+    position: relative;
+    margin-inline-end: 2rem;
+    font-family: "Noto Sans";
+}
+
+.navbar>a:last-child:after {
+    position: absolute;
+    content: '';
+    inset: -5px -20px;
+    background: rgba(255, 255, 255, .8);
+    background-blend-mode: exclusion;
+    box-shadow: 3px 5px 10px rgba(40, 40, 40, .1);
+    z-index: -1;
+    border-radius: 50vw;
+}
+
+.title {
+    min-width: max-content;
+}
+
+.heading {
+    margin-block: 2rem;
+    min-width: max-content;
+    text-shadow: 0 0 40px white;
+    grid-column: 1/6;
+    grid-row: 2/3;
+}
+
+.descriptionParagraph {
+    grid-column: 1/6;
+    grid-row: 3/8;
+}
+
+.targetAudience {
+    grid-column: 1/6;
+    grid-row: 8/9;
+}
+
+.heroImage {
+    grid-column:6/13;
+    grid-row:1/12;
+}
+
+.list {
+    grid-column: 1/6;
+    grid-row: 9/12;
+}
+
+.logoProcess {
+    grid-column: 1/6;
+    grid-row: 12/13;
+}
+
+.formerParagraph {
+    grid-column: 1/6;
+    grid-row: 13/14;
+}
+
+.initialThought {
+    grid-column: 1/6;
+    grid-row: 14/15;
+}
+
+.amazingly {
+    grid-column: 1/6;
+    grid-row: 15/16;
+}
+
+.logoElements {
+    grid-column: 1/6;
+    grid-row: 16/17;
+}
+
+.logoDescription {
+    grid-column: 1/6;
+    grid-row: 17/18;
+}
+
+.finalLogo {
+    grid-column: 6/11;
+    grid-row: 12/13;
+}
+
+.video {
+    display: block;
+    position: relative;
+    grid-column: 1/6;
+    grid-row: 18/24;
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    margin-block: 2rem;
+    border-radius: .5em;
+    filter: saturate(0);
+    transform: scale(1);
+    transition: filter 500ms ease-in-out, transform 300ms ease;
+}
+
+.video:hover {
+    filter: saturate(1);
+    transform: scale(.95);
+}
+
+.typographyDescription {
+    grid-column: 6/13;
+    grid-row: 13/14;
+}
+
+.typographyList {
+    grid-column: 6/13;
+    grid-row: 14/17;
+}
+
+.colorsDescription {
+    grid-column: 6/13;
+    grid-row: 17/18;
+}
+
+.colorPalette {
+    grid-column: 6/13;
+    grid-row: 18/23;
+}
+
+.parallaxImage {
+    grid-column: 1/13;
+    grid-row: 24/28;
+}
+.masonry {
+    grid-column: 1/13;
+    grid-row: 28/31;
+}
+
+@media (max-width: 850px) {
+    .project > * {
+        grid-column: 1/13;
+        grid-row:auto;
+    }
+    
+    .heroImage {
+        grid-row: 2/25;
+    }
+}

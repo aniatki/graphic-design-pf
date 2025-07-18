@@ -1,8 +1,17 @@
 import styles from './HeroImage.module.css'
 import { useState, useEffect } from "react"
 
-export default function HeroImage({ heroImage }) {
+export default function HeroImage({ customClass, heroImage, heroImageMobile }) {
     const [opacity, setOpacity] = useState(1);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    useEffect(()=> {
+        window.addEventListener("resize", () => {
+            setWindowWidth(window.innerWidth)
+        })
+    }, [])
+
+    const hero = windowWidth < 850 ? heroImageMobile : heroImage
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,10 +27,10 @@ export default function HeroImage({ heroImage }) {
     }, [])
 
     return (
-        <div className={styles.container} style={{ opacity: opacity }}>
+        <div className={`${styles.container} ${customClass}`} style={{ opacity: opacity }}>
             <div
                 className={styles.hero}
-                style={{ backgroundImage: `url(${heroImage?.src})` }}
+                style={{ backgroundImage: `url(${hero})` }}
             >
                 <div className={styles.nest}></div>
             </div>

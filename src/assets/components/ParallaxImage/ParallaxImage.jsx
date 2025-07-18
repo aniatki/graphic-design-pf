@@ -2,7 +2,7 @@ import styles from "./ParallaxImage.module.css"
 import { parallaxImage } from "../../projects/costcutter/parallaxImage.js"
 import { useEffect, useRef, useState } from "react"
 
-export default function ParallaxImage() {
+export default function ParallaxImage({ customClass }) {
     const ref = useRef(null)
     const [offsetY, setOffsetY] = useState(-100)
 
@@ -30,7 +30,7 @@ export default function ParallaxImage() {
     }, [])
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${customClass}`}>
             <div ref={ref}
                 aria-hidden={true}
                 className={styles.name} 

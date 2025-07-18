@@ -1,6 +1,4 @@
-export { contentBlocks } from './projectContent.js'
 export { colorPalette } from './colorPalette.js'
 export { heroImage } from './heroImage.js'
-export { listContent } from './listContent.js'
 export { logoElements } from './logoElements.js'
 export { typographyList } from './typographyList.js'

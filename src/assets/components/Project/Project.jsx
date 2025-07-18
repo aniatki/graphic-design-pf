@@ -1,6 +1,5 @@
 // Component imports
 import {
-  AppIcons,
   ColorPalette,
   List,
   Logo,
@@ -12,7 +11,6 @@ import {
 } from '..'
 import styles from "./Project.module.css"
 import { Link } from 'react-router-dom'
-import Icon from "../AppIcons/Icon.jsx"
 
 function renderBlock(block, index, componentMap) {
   const style = {
@@ -93,8 +91,6 @@ export default function Project({
 
       {contentBlocks && contentBlocks.map((block, index) => renderBlock(block, index, componentMap))}
       <ParallaxImage />
-      {/* <AppIcons /> */}
-      {/* <Icon /> */}
       <Masonry />
     </div>
   )

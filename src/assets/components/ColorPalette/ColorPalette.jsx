@@ -1,9 +1,9 @@
 import styles from './ColorPalette.module.css'
 import ColorSquare from './ColorSquare.jsx'
 
-export default function ColorPalette({ colorPalette }) {
+export default function ColorPalette({ colorPalette, customClass }) {
      return (
-        <div className={styles.grid}>
+        <div className={`${styles.grid} ${customClass}`}>
             {colorPalette.map((color, index) => (
                 <div key={index} className={styles.row}>
                     <ColorSquare color={color.hex} />
